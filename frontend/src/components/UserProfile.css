@@ -1,0 +1,436 @@
+/* UserProfile.css */
+
+.user-profile {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+/* Profile Header */
+.profile-header {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+}
+
+.profile-avatar img,
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  background: linear-gradient(135deg, #4a7c59, #9f5343);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+}
+
+.profile-header-info {
+  flex-grow: 1;
+}
+
+.profile-header-info h1 {
+  margin: 0 0 5px 0;
+  color: #4a7c59;
+  font-size: 28px;
+}
+
+.username {
+  color: #666;
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.join-date {
+  color: #9f5343;
+  margin: 0;
+  font-size: 14px;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+/* Buttons */
+.edit-btn, .save-btn, .cancel-btn, .add-listing-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.edit-btn, .save-btn {
+  background-color: #4a7c59;
+  color: white;
+}
+
+.edit-btn:hover, .save-btn:hover {
+  background-color: #3d6847;
+}
+
+.cancel-btn {
+  background-color: #9f5343;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #8a4737;
+}
+
+.add-listing-btn {
+  background-color: #4a7c59;
+  color: white;
+  font-size: 14px;
+}
+
+.add-listing-btn:hover {
+  background-color: #3d6847;
+}
+
+/* Navigation Tabs */
+.profile-nav {
+  display: flex;
+  gap: 0;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-tab {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  background: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-tab:hover {
+  background-color: #f8f9fa;
+}
+
+.nav-tab.active {
+  background-color: #4a7c59;
+  color: white;
+}
+
+/* Profile Content */
+.profile-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+/* Profile Information Section */
+.profile-section h2 {
+  color: #4a7c59;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-field.full-width {
+  grid-column: 1 / -1;
+}
+
+.profile-field label {
+  font-weight: 600;
+  color: #4a7c59;
+  font-size: 14px;
+}
+
+.profile-field input,
+.profile-field textarea {
+  padding: 10px;
+  border: 2px solid #e1e5e9;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.profile-field input:focus,
+.profile-field textarea:focus {
+  outline: none;
+  border-color: #4a7c59;
+}
+
+.profile-field span {
+  padding: 10px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Listings Section */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.section-header h2 {
+  color: #4a7c59;
+  margin: 0;
+  font-size: 24px;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.listing-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid #e1e5e9;
+  transition: all 0.3s ease;
+}
+
+.listing-card:hover {
+  border-color: #4a7c59;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.listing-image-placeholder {
+  width: 100%;
+  height: 150px;
+  background-color: #e9ecef;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.placeholder-icon {
+  font-size: 32px;
+  color: #adb5bd;
+}
+
+.listing-info h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.listing-price {
+  color: #4a7c59;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.listing-category {
+  color: #666;
+  margin: 0 0 10px 0;
+  font-size: 14px;
+}
+
+.listing-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.sold {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.views {
+  color: #666;
+  font-size: 12px;
+}
+
+.listing-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.listing-actions .edit-btn,
+.listing-actions .delete-btn {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: #9f5343;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #8a4737;
+}
+
+/* Purchases Section */
+.purchases-section h2 {
+  color: #4a7c59;
+  margin-bottom: 25px;
+  font-size: 24px;
+}
+
+.purchases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.purchase-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px;
+  border: 2px solid #e1e5e9;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.purchase-card:hover {
+  border-color: #4a7c59;
+  transform: translateX(5px);
+}
+
+.purchase-image-placeholder {
+  width: 80px;
+  height: 80px;
+  background-color: #e9ecef;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.purchase-details {
+  flex-grow: 1;
+}
+
+.purchase-details h3 {
+  margin: 0 0 5px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.purchase-price {
+  color: #4a7c59;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.purchase-seller,
+.purchase-date {
+  color: #666;
+  margin: 0;
+  font-size: 14px;
+}
+
+.purchase-status {
+  flex-shrink: 0;
+}
+
+.status.delivered {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.in-transit {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .user-profile {
+    padding: 15px;
+  }
+  
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .profile-actions {
+    flex-direction: row;
+  }
+  
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .purchase-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+}
